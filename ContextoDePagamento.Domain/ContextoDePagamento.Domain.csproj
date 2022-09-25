@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{33255B2F-0EFF-49BE-8712-D83C603DBAAF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ContextoDePagamento.Domain</RootNamespace>
+    <AssemblyName>ContextoDePagamento.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Flunt, Version=2.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Flunt.2.0.5\lib\netstandard2.0\Flunt.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\CriaAssinaturaBoletoCommand.cs" />
+    <Compile Include="Commands\CriaAssinaturaCartaoDeCreditoCommand.cs" />
+    <Compile Include="Commands\CriaAssinaturaPaypalCommand.cs" />
+    <Compile Include="Commands\Results\CommandResult.cs" />
+    <Compile Include="Entities\Aluno.cs" />
+    <Compile Include="Entities\Assinatura.cs" />
+    <Compile Include="Entities\Pagamentos\Boleto.cs" />
+    <Compile Include="Entities\Pagamentos\CartaoDeCredito.cs" />
+    <Compile Include="Entities\Pagamentos\Pagamento.cs" />
+    <Compile Include="Entities\Pagamentos\PayPal.cs" />
+    <Compile Include="Enums\TipoDocumento.cs" />
+    <Compile Include="Handlers\AssinaturaHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Queries\AlunoQueries.cs" />
+    <Compile Include="Repositories\IAlunoRepository.cs" />
+    <Compile Include="Services\IEmailService.cs" />
+    <Compile Include="ValueObjects\Documento.cs" />
+    <Compile Include="ValueObjects\Email.cs" />
+    <Compile Include="ValueObjects\Endereco.cs" />
+    <Compile Include="ValueObjects\Nome.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ContextoDePagamento.Shared\ContextoDePagamento.Shared.csproj">
+      <Project>{9fd45e43-33dd-4bf5-a4cb-21a3cc6e014b}</Project>
+      <Name>ContextoDePagamento.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

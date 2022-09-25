@@ -1,0 +1,8 @@
+C:\Projetos\ContextoDePagamento\ContextoDePagamento.Shared\bin\Debug\ContextoDePagamento.Shared.dll
+C:\Projetos\ContextoDePagamento\ContextoDePagamento.Shared\bin\Debug\ContextoDePagamento.Shared.pdb
+C:\Projetos\ContextoDePagamento\ContextoDePagamento.Shared\obj\Debug\ContextoDePagamento.Shared.csproj.AssemblyReference.cache
+C:\Projetos\ContextoDePagamento\ContextoDePagamento.Shared\obj\Debug\ContextoDePagamento.Shared.csproj.CoreCompileInputs.cache
+C:\Projetos\ContextoDePagamento\ContextoDePagamento.Shared\obj\Debug\ContextoDePagamento.Shared.dll
+C:\Projetos\ContextoDePagamento\ContextoDePagamento.Shared\obj\Debug\ContextoDePagamento.Shared.pdb
+C:\Projetos\ContextoDePagamento\ContextoDePagamento.Shared\bin\Debug\Flunt.dll
+C:\Projetos\ContextoDePagamento\ContextoDePagamento.Shared\obj\Debug\ContextoDePagamento.Shared.csproj.CopyComplete
